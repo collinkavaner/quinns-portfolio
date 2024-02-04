@@ -1,0 +1,74 @@
+
+.hero-section-dots {
+    display: flex;
+    gap: 100px;
+    align-items: flex-end;
+    justify-content: space-between;
+    max-width: 750px;
+    margin-top: 100px;
+}
+
+.hero-title h1 {
+    font-size: 4rem;
+}
+
+.hero-title h4 {
+    font-weight: 400;
+}
+
+.dot-square {
+    width: 132px;
+}
+
+.line {
+    max-width: 750px;
+    height: 2px;
+    margin: 20px 0;
+    background-color: #000;
+}
+
+.work-section {
+    width: 100%;
+    margin-top: 150px;
+    margin-bottom: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.work-projects {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+    max-width: 950px;
+}
+
+.work-item {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px;
+    border-radius: 20px;
+    border: 2px solid #000;
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.10);
+}
+
+.project-desc {
+    max-width: 750px;
+}
+
+.project-desc h4 {
+    margin-bottom: 20px;
+}
+
+.project-desc p {
+    margin-bottom: 40px;
+}
+
+.project-hero-img {
+    max-width: 300px;
+}
