@@ -6,7 +6,7 @@ nav {
     justify-content: space-between;
 }
 
-.nav-links {
+.navLinks {
     display: flex;
     align-items: center;
     gap: 30px;
@@ -17,15 +17,11 @@ nav {
     height: 60px;
 }
 
-.nav-link {
+.navLi {
     color: #000;
     text-decoration: none;
 }
 
-.nav-link:hover {
+.navLink:hover {
     color: #FFB5DC;
-}
-
-.nav-link.active {
-    color: #96B3E6;
 }
