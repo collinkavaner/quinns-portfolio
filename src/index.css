@@ -38,6 +38,7 @@ h1, h2, h3 {
 
 h1 {
     font-size: 3.25rem;
+    line-height: 1.2;
 }
 
 h2 {
@@ -54,8 +55,13 @@ h4 {
     font-weight: 400;
 }
 
+p {
+    line-height: 1.5;
+}
 
-button {
+
+.primary-button {
+    max-width: fit-content;
     display: flex;
     gap: 12px;
     cursor: pointer;
@@ -67,7 +73,7 @@ button {
     border-radius: 100px;
 }
 
-button:hover {
+.primary-button:hover {
     background-color: #c5daff;
 }
 

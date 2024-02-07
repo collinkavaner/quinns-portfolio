@@ -25,8 +25,8 @@ function Work() {
                         <h3>Museum Discounts</h3>
                         <h4>UX case study</h4>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                        <Link to="/museum-discounts">
-                            <button><span>View Project</span><HiChevronRight className='chev-r'/></button>
+                        <Link to="/museum-discounts" className='primary-button'>
+                            <span>View Project</span><HiChevronRight className='chev-r'/>
                         </Link>
                     </div>
                     <img src={AbstractStatue} className={styles.projectHeroImg} alt="Person standing by an abstract statue" />
@@ -38,8 +38,8 @@ function Work() {
                         <h3>Textile Museum of Canada</h3>
                         <h4>IA & NAV redesign</h4>
                         <p>In this project I re-imagined the information architecture and navigation for the Textile Museum of Canada's website.</p>
-                        <Link to="/textile-museum-canada">
-                            <button><span>View Project</span><HiChevronRight className='chev-r'/></button>
+                        <Link to="/textile-museum-canada" className='primary-button'>
+                            <span>View Project</span><HiChevronRight className='chev-r'/>
                         </Link>
                     </div>
                 </div>
@@ -49,8 +49,8 @@ function Work() {
                         <h3>POS tipping screen</h3>
                         <h4>Mini UX case study</h4>
                         <p>Point of sale (POS) machines are everywhere, but that doesn't mean they're fun to use. In this project, I re-imagined the POS machine tipping screen. </p>
-                        <Link to="/pos-tipping-screen">
-                            <button><span>View Project</span><HiChevronRight className='chev-r'/></button>
+                        <Link to="/pos-tipping-screen" className='primary-button'>
+                            <span>View Project</span><HiChevronRight className='chev-r'/>
                         </Link>
                     </div>
                     <img src={PosMachine} className={styles.projectHeroImg} alt="point of sales machine" />
