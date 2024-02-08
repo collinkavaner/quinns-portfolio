@@ -1,4 +1,5 @@
 import styles from '../styles/work.module.css'
+import { useEffect } from 'react'
 import FourDots from '../assets/4-circles.png'
 import AbstractStatue from '../assets/abstract-statue.webp'
 import SewingMachine from '../assets/sewing-machine.webp'
@@ -7,6 +8,11 @@ import { Link } from 'react-router-dom';
 import { HiChevronRight } from "react-icons/hi";
 
 function Work() {
+
+    useEffect(() => {
+        document.title = "Quinn Kavaner | UX Portfolio"
+     }, []);
+
   return (
     <>
         <div className={styles.heroSectionDots}>

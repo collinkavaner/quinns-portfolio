@@ -1,9 +1,15 @@
 import styles from '../styles/about.module.css'
+import { useEffect } from 'react';
 import Quinn from '../assets/my-face.webp'
 import FourDots from '../assets/4-circles-straight.png'
 import { FaLinkedin } from "react-icons/fa";
 
 function About() {
+
+    useEffect(() => {
+        document.title = "About Quinn Kavaner"
+     }, []);
+
   return (
     <>
         <div className={styles.aboutSection}>

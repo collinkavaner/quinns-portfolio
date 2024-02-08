@@ -1,4 +1,6 @@
-
+p, li {
+    max-width: 700px;
+}
 
 .heroSection {
     margin-top: 100px;
@@ -21,6 +23,74 @@
     h3 {
         max-width: 600px;
         display: inline-block;
+        margin-bottom: 50px;
+    }
+
+    img {
+        max-width: 100%;
+        margin-bottom: 100px;
+    }
+
+    h2 {
+        margin-bottom: 10px;
+    }
+}
+
+.demographic {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.affinitySection {
+    margin-top: 100px;
+     h2 {
+        margin-bottom: 20px;
+     }
+}
+
+.affinityContainer {
+    display: flex;
+    margin-top: 50px;
+}
+
+.affinityColumn {
+    width: 33%;
+    display: flex;
+    flex-direction: column;
+}
+
+.personaSection {
+    margin-top: 50px;
+
+    h2 {
+        margin-bottom: 10px;
+    }
+
+    p {
+        margin-bottom: 32px;
+    
+    }
+}
+
+.personaContainer {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.mary {
+    max-width: 300px;
+}
+
+.asIsSection {
+    margin-top: 150px;
+
+    h2 {
+        margin-bottom: 10px;
+    }
+
+    p {
         margin-bottom: 50px;
     }
 }
