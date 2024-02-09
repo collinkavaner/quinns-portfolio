@@ -1,5 +1,17 @@
 p, li {
-    max-width: 700px;
+    max-width: 750px;
+}
+
+section {
+    margin-top: 125px;
+}
+
+.titleSpacing {
+    margin-bottom: 20px;
+}
+
+.paraSpacing {
+    margin-bottom: 32px;
 }
 
 .heroSection {
@@ -18,7 +30,6 @@ p, li {
 }
 
 .mockupSection {
-    margin-top: 125px;
 
     h3 {
         max-width: 600px;
@@ -26,14 +37,20 @@ p, li {
         margin-bottom: 50px;
     }
 
-    img {
-        max-width: 100%;
-        margin-bottom: 100px;
-    }
+}
 
-    h2 {
-        margin-bottom: 10px;
-    }
+.mockupPhoneContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 45px;
+    margin-bottom: 100px;
+}
+
+.mockupPhoneImg {
+    max-width: 22%;
+    box-shadow: 0px 50px 50px -50px rgba(0, 0, 0, 0.32);
+    border: 2px solid #000;
+    border-radius: 12px;
 }
 
 .demographic {
@@ -42,35 +59,14 @@ p, li {
     gap: 30px;
 }
 
-.affinitySection {
-    margin-top: 100px;
-     h2 {
-        margin-bottom: 20px;
-     }
-}
-
 .affinityContainer {
     display: flex;
-    margin-top: 50px;
 }
 
 .affinityColumn {
     width: 33%;
     display: flex;
     flex-direction: column;
-}
-
-.personaSection {
-    margin-top: 50px;
-
-    h2 {
-        margin-bottom: 10px;
-    }
-
-    p {
-        margin-bottom: 32px;
-    
-    }
 }
 
 .personaContainer {
@@ -83,14 +79,14 @@ p, li {
     max-width: 300px;
 }
 
-.asIsSection {
-    margin-top: 150px;
+.prototypeSection {
 
-    h2 {
-        margin-bottom: 10px;
+    a {
+        margin-bottom: 32px;
     }
+}
 
-    p {
-        margin-bottom: 50px;
-    }
+.takeawaysSection {
+    width: fit-content;
+    margin: 100px auto;
 }
