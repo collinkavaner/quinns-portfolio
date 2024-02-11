@@ -1,0 +1,55 @@
+
+p, li {
+    max-width: 750px;
+}
+
+section {
+    margin-top: 125px;
+}
+
+.titleSpacing {
+    margin-bottom: 20px;
+}
+
+.paraSpacing {
+    margin-bottom: 32px;
+}
+
+.heroSection {
+    margin-top: 100px;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+
+}
+
+.heroSection > h1:first-child {
+    font-weight: 400;
+}
+
+.sewingMachine {
+    max-width: 400px;
+}
+
+.textileImgsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.textileImgs {
+    max-width: 48%;
+    box-shadow: 0px 50px 50px -50px rgba(0, 0, 0, 0.32);
+}
+
+.finalSection {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+    margin-bottom: 100px;
+}
+
+.textileGroup {
+    max-width: 50%;
+    border-radius: 12px;
+}

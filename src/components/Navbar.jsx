@@ -11,8 +11,8 @@ function Navbar() {
             <img className={styles.logo} src={qkLogo} alt="QK Logo" />
         </NavLink>
       <div className={styles.navLinks}>
-          <NavLink to="/" style={({isActive}) => isActive ? {color: "#96B3E6"} : null} className={styles.navLink}>Work</NavLink>
-          <NavLink to="/about" style={({isActive}) => isActive ? {color: "#96B3E6"} : null} className={styles.navLink}>About</NavLink>
+          <NavLink to="/" style={({isActive}) => isActive ? {color: "#4071c6"} : null} className={styles.navLink}>Work</NavLink>
+          <NavLink to="/about" style={({isActive}) => isActive ? {color: "#4071c6"} : null} className={styles.navLink}>About</NavLink>
       </div>
     </nav>
   )

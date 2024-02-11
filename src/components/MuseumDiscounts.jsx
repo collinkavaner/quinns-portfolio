@@ -2,7 +2,6 @@ import styles from '../styles/museum.module.css'
 import { useEffect } from 'react';
 import { HiArrowSmDown, HiChevronRight } from "react-icons/hi";
 import AbstractStatue from '../assets/abstract-statue.webp'
-// import PhoneMockup from '../assets/museum_page/UXsprint1-phones.avif'
 import AvailibleTickets from '../assets/museum_page/View-Available-Tickets.avif'
 import SavedTickets from '../assets/museum_page/View-Saved-Tickets.avif'
 import Ticket2 from '../assets/museum_page/View-Ticket2.avif'
@@ -44,7 +43,6 @@ function MuseumDiscounts() {
 
       <section className={styles.mockupSection}>
         <h3>A mobile app with an updated list of all discounts available for Toronto museums. <HiArrowSmDown /></h3>
-        {/* <img src={PhoneMockup} alt="Mobile app mockup" className={styles.phoneMockup}/> */}
         <div className={styles.mockupPhoneContainer}>
           <img src={AvailibleTickets} alt="View available tickets"className={styles.mockupPhoneImg}/>
           <img src={SavedTickets} alt="View saved tickets" className={styles.mockupPhoneImg}/>
