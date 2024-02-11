@@ -13,8 +13,10 @@ function TextileMuseum() {
     <>
       <section className={styles.heroSection}>
         <div>
-          <h1>Re-imagining the</h1>
-          <h1 className={styles.titleSpacing}>Textile Museum of Canada</h1>
+          <h1 className={styles.titleSpacing}>
+            <span className={styles.reImagine}>Re-imagining the </span>
+            Textile Museum of Canada
+          </h1>
           <p>
             During an information architecture course at UofT, my classmates and I had the opportunity to redesign the website for the <a href='https://textilemuseum.ca' target='_blank'>Textile Museum of Canada</a>.
             This was not a full UX project as the focus was on enhancing information architecture and navigation. There is an extensive amount of content on the website,

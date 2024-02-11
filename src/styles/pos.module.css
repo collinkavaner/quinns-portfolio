@@ -20,40 +20,40 @@ section {
     display: flex;
     align-items: center;
     gap: 50px;
-
 }
 
-.reImagine {
-    display: block;
-    font-weight: 400;
-}
-
-.sewingMachine {
+.posMachine {
     max-width: 350px;
 }
 
-.textileImgsContainer {
+.posNotes {
+    max-width: 80%;
+}
+
+.personaSection {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+}
+
+.tommyTipper {
+    max-width: 215px;
+}
+
+.protoFlowContainer {
     display: flex;
     flex-wrap: wrap;
     gap: 25px;
 }
 
-.textileImgs {
+.protoFlow {
     max-width: 48%;
-    box-shadow: 0px 50px 50px -50px rgba(0, 0, 0, 0.32);
 }
 
-.finalSection {
-    display: flex;
-    gap: 50px;
-    align-items: center;
+.takeawaysSection {
     margin-bottom: 100px;
 }
 
-.textileGroup {
-    max-width: 50%;
-    border-radius: 12px;
-}
 
 @media only screen and (max-width: 768px) {
 
@@ -68,30 +68,25 @@ section {
         margin-top: 50px !important;
     }
 
-    .reImagine {
-        display: inline;
-
-    }
-
-    .sewingMachine {
+    .posMachine {
         max-width: 300px;
     }
 
-    .textileImgsContainer {
-        gap: 20px;
-    }
-    
-    .textileImgs {
+    .posNotes {
         max-width: 100%;
     }
 
-    .finalSection {
+    .personaSection {
         flex-direction: column;
-        gap: 32px;
         align-items: flex-start;
+        gap: 20px;
     }
 
-    .textileGroup {
+    .protoFlowContainer {
+        gap: 40px;
+    }
+
+    .protoFlow {
         max-width: 100%;
     }
 

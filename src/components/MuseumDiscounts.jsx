@@ -32,7 +32,7 @@ function MuseumDiscounts() {
     <>
       <section className={styles.heroSection}>
         <div>
-          <h1>How can we help Toronto residents find discounted museum tickets?</h1>
+          <h1 className={styles.titleSpacing}>How can we help Toronto residents find discounted museum tickets?</h1>
           <p>
             For the second half of my first semester (fall 2023) at UofT, I worked with five of my peers on a summative project. Our task was simple: Improve the lives of Toronto residents. 
             With a shared interest in the entertainment and recreation sector, we narrowed our scope to museums. More specifically, the expensive prices that often drive people away from visiting. Our goal was to make it easier and faster to find discounted museum tickets, which lead us to our <b>solution:</b>

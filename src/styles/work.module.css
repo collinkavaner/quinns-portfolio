@@ -72,3 +72,38 @@
 .projectHeroImg {
     max-width: 300px;
 }
+
+@media only screen and (max-width: 768px) {
+
+    .heroSectionDots {
+        flex-direction: column-reverse;
+        align-items: flex-start;
+        gap: 25px;
+        margin-top: 50px;
+    }
+
+    .dotSquare {
+        width: 100px;
+    }
+
+    .workSection {
+        margin-top: 100px;
+        margin-bottom: 100px;
+    }
+
+    .workItem {
+        flex-direction: column-reverse;
+        align-items: flex-start;
+        gap: 50px;
+        padding: 32px 25px
+    }
+
+    .workItem:nth-child(2) {
+        flex-direction: column;
+    }
+
+    .projectHeroImg {
+        max-width: 200px;
+    }
+
+}
