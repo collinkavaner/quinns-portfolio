@@ -27,7 +27,7 @@ function About() {
                 </div>
                 <div>
                     <p>
-                        I'm a 22-year-old creative from Toronto, Canada. After publishing my first book at twelve, I knew I had a gift for writing and a passion for sharing ideas. In June of 2023 I graduated from the University of Guelph-Humber with a bachelor's degree in media and communication studies. With a diverse range of skills
+                        I'm a 23-year-old creative from Toronto, Canada. After publishing my first book at twelve, I knew I had a gift for writing and a passion for sharing ideas. In June of 2023 I graduated from the University of Guelph-Humber with a bachelor's degree in media and communication studies. With a diverse range of skills
                         and interests, I directed my focus towards UXD (user experience design). In September of 2023, I embarked on the next phase of my academic journey by joining the Master of Information program at the University of Toronto, specializing in UXD.
                     </p>
                     <br />
