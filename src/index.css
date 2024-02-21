@@ -67,8 +67,8 @@ a {
     display: inline-block;
     text-decoration: none;
     color: #4071c6;
+    transition: all 0.2s ease-in-out;
 }
-
 
 
 .primary-button {
@@ -83,15 +83,25 @@ a {
     padding: 10px 20px 10px 25px;
     border-radius: 100px;
     color: #000;
+    transition: all 0.2s ease-in-out;
 }
 
 .primary-button:hover {
     background-color: #c5daff;
 }
 
-.chev-r {
+.chev-r, .chev-l {
     width: 24px;
     height: 24px;
+    transition: all 0.2s ease-in-out;
+}
+
+.primary-button:hover .chev-r {
+    transform: translateX(5px);
+}
+
+.primary-button:hover .chev-l {
+    transform: translateX(-5px);
 }
 
 @media only screen and (max-width: 768px) {
@@ -100,7 +110,7 @@ a {
         font-size: 85%;
     }
 
-    p, a {
+    p, a, li {
         font-size: 16px;
     }
 

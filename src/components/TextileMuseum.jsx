@@ -1,4 +1,5 @@
 import styles from '../styles/textile.module.css'
+import ProjectSwitcher from './ProjectSwitcher';
 import Sewing from '../assets/sewing-machine.webp'
 import InfoArch from '../assets/textile_page/info-arch.avif'
 import TextileOne from '../assets/textile_page/textile-1.avif'
@@ -58,6 +59,8 @@ function TextileMuseum() {
         </div>
         <img src={TextileGroup} alt="Group Project Members" className={styles.textileGroup} />
       </section>
+
+      <ProjectSwitcher NextProject={"POS Tipping Screen"} PrevProject={"Museum Discounts"} NextUrl={"/pos-tipping-screen"} PrevUrl={"/museum-discounts"} />
     </>
   );
 }

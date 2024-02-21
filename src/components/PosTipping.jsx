@@ -1,4 +1,5 @@
 import styles from '../styles/pos.module.css'
+import ProjectSwitcher from './ProjectSwitcher';
 import POS from '../assets/pos-machine.webp'
 import POSNotes from '../assets/pos-machine/pos-notes.avif'
 import Tommy from '../assets/pos-machine/tommy-tipper.avif'
@@ -56,6 +57,7 @@ function PosTipping() {
           This modest project helped me discover the complexities of solving user issues; there is no easy "fix" and everyone has a different opinion. While I concentrated on tip customization, a broader project could have allowed me to explore the numerous other reasons why many people dislike POS tipping screens.
         </p>
       </section>
+      <ProjectSwitcher NextProject="Museum Discounts" PrevProject="Textile Museum of Canada" NextUrl="/museum-discounts" PrevUrl="/textile-museum-canada" />
     </>
   );
 }

@@ -25,6 +25,9 @@ function App() {
           <Route path="*" element={<NoMatch />} />
         </Routes>
       </main>
+      <footer>
+        <p>© {new Date().getFullYear()} Quinn Kavaner</p>
+      </footer>
     </>
   )
 }
