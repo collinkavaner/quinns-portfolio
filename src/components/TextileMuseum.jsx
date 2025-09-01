@@ -55,7 +55,7 @@ function TextileMuseum() {
       <section className={styles.finalSection}>
         <div>
           <h2 className={styles.titleSpacing}>Final Thoughts</h2>
-          <p>After completing the project, my group and I had the pleasure of presenting our IA and NAV redesign for the museum director and CEO, Kirsten Kamper. She loved the presentation and our approach to the redesign. Definitely a rewarding a project!</p>
+          <p>After completing the project, my group and I had the pleasure of presenting our IA and NAV redesign for the museum director and CEO, Kirsten Kamper. She loved the presentation and our approach to the redesign. Definitely a rewarding project!</p>
         </div>
         <img src={TextileGroup} alt="Group Project Members" className={styles.textileGroup} />
       </section>
