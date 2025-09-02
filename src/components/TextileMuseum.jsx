@@ -1,4 +1,5 @@
 import styles from '../styles/textile.module.css'
+import { useEffect } from 'react';
 import ProjectSwitcher from './ProjectSwitcher';
 import Sewing from '../assets/sewing-machine.webp'
 import InfoArch from '../assets/textile_page/info-arch.avif'
@@ -10,6 +11,11 @@ import TextileFive from '../assets/textile_page/textile-5.avif'
 import TextileGroup from '../assets/textile_page/textile-group.avif'
 
 function TextileMuseum() {
+  
+  useEffect(() => {
+      document.title = "Textile Museum | IA & NAV redesign"
+  }, []);
+  
   return (
     <>
       <section className={styles.heroSection}>

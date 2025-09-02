@@ -26,8 +26,8 @@ import MidPrototype from '../assets/museum_page/Mid-fi-prototype.avif'
 function MuseumDiscounts() {
 
   useEffect(() => {
-    document.title = "Museum Discounts | UX Case Study"
- }, []);
+      document.title = "Museum Discounts | UX Case Study"
+  }, []);
 
   return (
     <>
