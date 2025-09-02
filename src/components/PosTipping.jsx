@@ -1,4 +1,5 @@
 import styles from '../styles/pos.module.css'
+import { useEffect } from 'react';
 import ProjectSwitcher from './ProjectSwitcher';
 import POS from '../assets/pos-machine.webp'
 import POSNotes from '../assets/pos-machine/pos-notes.avif'
@@ -7,6 +8,11 @@ import ProtoFlow1 from '../assets/pos-machine/proto-flow-1.avif'
 import ProtoFlow2 from '../assets/pos-machine/proto-flow-2.avif'
 
 function PosTipping() {
+
+  useEffect(() => {
+      document.title = "POS tipping screen | Mini UX case study"
+  }, []);
+
   return (
     <>
       <section className={styles.heroSection}>
