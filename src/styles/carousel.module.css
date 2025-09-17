@@ -1,0 +1,91 @@
+
+.carousel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.embla {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    margin: 0 auto; 
+    box-shadow: 0px 50px 50px -50px rgba(0, 0, 0, 0.32);
+}
+
+.emblaContainer {
+    display: flex;
+    gap: 15px;
+}
+
+.emblaSlide {
+    flex: 0 0 100%; /* each slide takes full width */
+    min-width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    user-select: none;
+    /* height: 200px; */
+}
+
+.emblaImage {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Buttons */
+.nextButton, .prevButton {
+    /* margin: 10px 5px; */
+    padding: 10px 10px;
+    font-size: 1.2rem;
+    background: #fff;
+    border: 2px solid #000000;
+    border-radius: 32px;
+    cursor: pointer;
+
+    svg {
+        width: 24px;
+        height: 24px;
+    }
+
+}
+
+.nextButton:hover, .prevButton:hover {
+    background-color: #c5daff;
+}
+
+.dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: none;
+  background: #ccc;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.dot:hover {
+  background: #999;
+}
+
+.dotActive {
+  background: #333;
+}
+
+

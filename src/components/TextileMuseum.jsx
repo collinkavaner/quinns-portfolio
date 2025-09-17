@@ -1,6 +1,8 @@
 import styles from '../styles/textile.module.css'
 import { useEffect } from 'react';
 import ProjectSwitcher from './ProjectSwitcher';
+import Carousel from '../common/carousel';
+import Lightbox from '../common/lightbox';
 import Sewing from '../assets/sewing-machine.webp'
 import InfoArch from '../assets/textile_page/info-arch.avif'
 import TextileOne from '../assets/textile_page/textile-1.avif'
@@ -43,18 +45,17 @@ function TextileMuseum() {
       <section className={styles.infoArchSection}>
         <h2 className={styles.titleSpacing}>Information Architecture</h2>
         <p className={styles.paraSpacing}>I used <b>Miro</b> to create an information architecture diagram that shows where every page exists on the website’s hierarchy and how to get there. In order to increase accessibility for users, we included a “buy tickets” action button in the header navigation and under the visit menu. Similarly, we moved the shop further up in the hierarchy to increase traffic and expose local textile artists to a wider audience.</p>
-        <img src={InfoArch} alt="Information Architecture Diagram" />
+        <Lightbox 
+          src={InfoArch}
+          alt="Information Architecture Diagram"
+        />
       </section>
 
       <section className={styles.navigationSection}>
         <h2 className={styles.titleSpacing}>Navigation Design</h2>
         <p className={styles.paraSpacing}>The last part of this project was to bring the information architecture to life. The following screens were created using <b>Balsamiq</b> and they show the desktop navigation task flow for locating the “Community Quilt Drop In Sessions” page.</p>
         <div className={styles.textileImgsContainer}>
-          <img src={TextileOne} alt="Textile Museum Website Navigation Part 1" className={styles.textileImgs} />
-          <img src={TextileTwo} alt="Textile Museum Website Navigation Part 2" className={styles.textileImgs} />
-          <img src={TextileThree} alt="Textile Museum Website Navigation Part 3" className={styles.textileImgs} />
-          <img src={TextileFour} alt="Textile Museum Website Navigation Part 4" className={styles.textileImgs} />
-          <img src={TextileFive} alt="Textile Museum Website Navigation Part 5" className={styles.textileImgs} />
+          <Carousel slides={[TextileOne, TextileTwo, TextileThree, TextileFour, TextileFive]} />
         </div>
       </section>
 
