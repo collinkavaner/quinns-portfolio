@@ -21,10 +21,10 @@ export default function Lightbox({ src, alt }) {
 
   const toggleZoom = () => {
     setZoomed((prev) => !prev);
-    setPosition({ x: 0, y: 0 }); // reset pan on zoom toggle
+    setPosition({ x: 0, y: 0 }); // reset pan
   };
 
-  // Drag start
+  // ----- Mouse handlers -----
   const handleMouseDown = (e) => {
     if (!zoomed) return;
     setDragging(true);
@@ -36,20 +36,43 @@ export default function Lightbox({ src, alt }) {
     if (!dragging) return;
     const dx = e.clientX - start.x;
     const dy = e.clientY - start.y;
-    // If moved more than a few pixels, consider it a drag
+
     if (Math.abs(dx - position.x) > 2 || Math.abs(dy - position.y) > 2) {
       dragMoved.current = true;
     }
-    setPosition({
-      x: dx,
-      y: dy,
-    });
+
+    setPosition({ x: dx, y: dy });
   };
 
   const handleMouseUp = () => setDragging(false);
 
+  // ----- Touch handlers -----
+  const handleTouchStart = (e) => {
+    if (!zoomed) return;
+    const touch = e.touches[0];
+    setDragging(true);
+    setStart({ x: touch.clientX - position.x, y: touch.clientY - position.y });
+    dragMoved.current = false;
+  };
+
+  const handleTouchMove = (e) => {
+    if (!dragging) return;
+    const touch = e.touches[0];
+    const dx = touch.clientX - start.x;
+    const dy = touch.clientY - start.y;
+
+    if (Math.abs(dx - position.x) > 2 || Math.abs(dy - position.y) > 2) {
+      dragMoved.current = true;
+    }
+
+    setPosition({ x: dx, y: dy });
+    e.preventDefault(); // 🚫 stop background scroll while dragging
+  };
+
+  const handleTouchEnd = () => setDragging(false);
+
   // Only toggle zoom if not a drag
-  const handleImageClick = (e) => {
+  const handleImageClick = () => {
     if (dragMoved.current) {
       dragMoved.current = false;
       return;
@@ -66,11 +89,24 @@ export default function Lightbox({ src, alt }) {
     return () => document.removeEventListener("keydown", handleEsc);
   }, []);
 
-  // Only render portal if document.body is available
+  // Lock body scroll when lightbox open
+  useEffect(() => {
+    if (open) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+  }, [open]);
+
   const canUseDOM = typeof window !== "undefined" && !!document.body;
+
+  // Determine zoom scale based on device
+  const isMobile = canUseDOM && window.matchMedia && window.matchMedia('(pointer: coarse)').matches;
+  const zoomScale = isMobile ? 3 : 1.5;
+
   return (
     <>
-      {/* Thumbnail / clickable image */}
+      {/* Thumbnail */}
       <img
         src={src}
         alt={alt}
@@ -78,48 +114,57 @@ export default function Lightbox({ src, alt }) {
         onClick={openLightbox}
       />
 
-      {open && canUseDOM && createPortal(
-        <div
-          className={styles.lightboxOverlay}
-          onClick={closeLightbox}
-          onMouseMove={handleMouseMove}
-          onMouseUp={handleMouseUp}
-        >
-          <button className={styles.lightboxClose} onClick={closeLightbox}>
-            <HiX size={28} />
-          </button>
+      {open &&
+        canUseDOM &&
+        createPortal(
           <div
-            className={styles.lightboxContent}
-            onClick={(e) => e.stopPropagation()} // prevent closing on content click
+            className={styles.lightboxOverlay}
+            onClick={closeLightbox}
+            onMouseMove={handleMouseMove}
+            onMouseUp={handleMouseUp}
+            onTouchMove={handleTouchMove}
+            onTouchEnd={handleTouchEnd}
           >
+            <button className={styles.lightboxClose} onClick={closeLightbox}>
+              <HiX size={28} />
+            </button>
+
             <div
-              className={styles.lightboxImageWrapper}
-              onMouseDown={handleMouseDown}
-              onMouseUp={handleMouseUp}
-              onDoubleClick={toggleZoom} // double click also toggles zoom
+              className={styles.lightboxContent}
+              onClick={(e) => e.stopPropagation()}
             >
-              <img
-                src={src}
-                alt={alt}
-                onClick={handleImageClick}
-                onDragStart={e => e.preventDefault()}
-                className={`${styles.lightboxImage} ${zoomed ? styles.zoomed : ""}`}
-                style={{
-                  transform: zoomed
-                    ? `scale(1.5) translate(${position.x / 1.5}px, ${position.y / 1.5}px)`
-                    : "scale(1) translate(0,0)",
-                  cursor: zoomed
-                    ? dragging
-                      ? "grabbing"
-                      : "grab"
-                    : "zoom-in",
-                }}
-              />
+              <div
+                className={styles.lightboxImageWrapper}
+                onMouseDown={handleMouseDown}
+                onMouseUp={handleMouseUp}
+                onTouchStart={handleTouchStart}
+                onDoubleClick={toggleZoom}
+              >
+                <img
+                  src={src}
+                  alt={alt}
+                  onClick={handleImageClick}
+                  onDragStart={(e) => e.preventDefault()}
+                  className={`${styles.lightboxImage} ${
+                    zoomed ? styles.zoomed : ""
+                  }`}
+                  style={{
+                    transform: zoomed
+                      ? `scale(${zoomScale}) translate(${position.x / zoomScale}px, ${position.y / zoomScale}px)`
+                      : "scale(1) translate(0,0)",
+                    cursor: zoomed
+                      ? dragging
+                        ? "grabbing"
+                        : "grab"
+                      : "zoom-in",
+                    touchAction: zoomed ? "none" : "auto", // prevent scroll interference
+                  }}
+                />
+              </div>
             </div>
-          </div>
-        </div>,
-        document.body
-      )}
+          </div>,
+          document.body
+        )}
     </>
   );
 }

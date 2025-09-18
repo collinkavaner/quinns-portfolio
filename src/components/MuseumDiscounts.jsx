@@ -2,6 +2,7 @@ import styles from '../styles/museum.module.css'
 import ProjectSwitcher from './ProjectSwitcher';
 import { useEffect } from 'react';
 import { HiArrowSmDown, HiChevronRight } from "react-icons/hi";
+import Lightbox from '../common/lightbox';
 import AbstractStatue from '../assets/abstract-statue.webp'
 import AvailibleTickets from '../assets/museum_page/View-Available-Tickets.avif'
 import SavedTickets from '../assets/museum_page/View-Saved-Tickets.avif'
@@ -74,17 +75,17 @@ function MuseumDiscounts() {
         <p className={styles.paraSpacing}>After all of the data was collected, I created an affinity diagram to organize interview data into natural groups. As shown in the image below, I grouped participant responses into <b>seven categories.</b> This gave my group and I a better understanding of the common themes and ideas in our research.</p>
         <div className={styles.affinityContainer}>
           <div className={styles.affinityColumn}>
-            <img src={UXFrame01} alt="Affinity diagram" />
-            <img src={UXFrame02} alt="Affinity diagram" />
-            <img src={UXFrame03} alt="Affinity diagram" />
+            <Lightbox src={UXFrame01} alt="Affinity diagram" />
+            <Lightbox src={UXFrame02} alt="Affinity diagram" />
+            <Lightbox src={UXFrame03} alt="Affinity diagram" />
           </div>
           <div className={styles.affinityColumn}>
-            <img src={UXFrame04} alt="Affinity diagram" />
+            <Lightbox src={UXFrame04} alt="Affinity diagram" />
           </div>
           <div className={styles.affinityColumn}>
-            <img src={UXFrame05} alt="Affinity diagram" />
-            <img src={UXFrame06} alt="Affinity diagram" />
-            <img src={UXFrame07} alt="Affinity diagram" />
+            <Lightbox src={UXFrame05} alt="Affinity diagram" />
+            <Lightbox src={UXFrame06} alt="Affinity diagram" />
+            <Lightbox src={UXFrame07} alt="Affinity diagram" />
           </div>
         </div>
       </section>
@@ -110,13 +111,19 @@ function MuseumDiscounts() {
       <section className={styles.asIsSection}>
         <h2 className={styles.titleSpacing}>As-is Diagram</h2>
         <p className={styles.paraSpacing}>In order to provide a solution for Mary, we created an as-is diagram (as shown below) that maps out Mary's typical museum visit and the events leading up to it. This helped us get an understanding of what Mary is doing, thinking and feeling during each step of the process. Based on our primary research data, I broke this process down into four steps.</p>
-        <img src={AsIsDiagram} alt="As-is diagram" />
+        <Lightbox 
+          src={AsIsDiagram}
+          alt="As-is diagram"
+        />
       </section>
 
       <section className={styles.ideationSection}>
         <h2 className={styles.titleSpacing}>Ideation & Sketches</h2>
         <p className={styles.paraSpacing}>After outlining Mary's journey, we began ideating solutions to make her experience more enjoyable. During our brainstorming sessions, we focused on <b>BIG</b> ideas and discarded nothing. Everyone came up with several ideas and we did rough sketches to illustrate our visions (as shown below). Then we grouped our ideas before deciding on which ones to move forward with. </p>
-        <img src={BigIdeas} alt="Big ideas grouping" />
+        <Lightbox
+          src={BigIdeas}
+          alt="Big ideas grouping"
+        />
       </section>
 
       <section className={styles.usabilitySection}>
@@ -130,7 +137,10 @@ function MuseumDiscounts() {
         <p className={styles.paraSpacing}>Once the usability testing was completed, my teammates Kyle and Karthik used the feedback to create a digital prototype on Figma. The following image shows the task flows for our mobile museum app.</p>
         <a href="https://www.figma.com/proto/yX7C1cRpOEkEvvYozmgIg1/Museum-Discounts?type=design&node-id=2314-6&t=G6f6hbnNJYq6WP2F-1&scaling=scale-down&page-id=2314%3A3&starting-point-node-id=2314%3A6&mode=design"
         className='primary-button' target='_blank'><span>View Live Prototype</span><HiChevronRight className='chev-r'/></a>
-        <img src={MidPrototype} alt="Mid-fi prototype" />
+        <Lightbox
+          src={MidPrototype}
+          alt="Mid-fi prototype"
+        />
       </section>
 
       <section className={styles.takeawaysSection}>
