@@ -7,6 +7,7 @@ import MuseumDiscounts from './components/MuseumDiscounts'
 import TextileMuseum from './components/TextileMuseum'
 import PosTipping from './components/PosTipping'
 import NoMatch from './components/NoMatch'
+import TwoWayBay from './components/twoWayBay';
 
 function App() {
 
@@ -21,6 +22,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/museum-discounts" element={<MuseumDiscounts />} />
           <Route path="/textile-museum-canada" element={<TextileMuseum />} />
+          <Route path="/two-way-bay" element={<TwoWayBay />} />
           <Route path="/pos-tipping-screen" element={<PosTipping />} />
           <Route path="*" element={<NoMatch />} />
         </Routes>

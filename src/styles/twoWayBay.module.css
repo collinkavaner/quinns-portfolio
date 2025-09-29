@@ -1,0 +1,53 @@
+p, li {
+    max-width: 750px;
+}
+
+section {
+    margin-top: 125px;
+}
+
+.notBold {
+    font-weight: 400;
+}
+
+.titleSpacing {
+    margin-bottom: 20px;
+}
+
+.paraSpacing {
+    margin-bottom: 32px;
+}
+
+.personaImg {
+    max-width: 600px;
+}
+
+.designImgsContainer {
+    display: flex;
+    gap: 25px;
+    align-items: flex-start;
+}
+
+.designImg {
+    width: 100%;
+    height: auto;
+}
+
+.screensContainer {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 25px;
+    row-gap: 70px;
+    margin-bottom: 100px;
+}
+
+.screenCard {
+    max-width: 22%;
+}
+
+.screenCard > img {
+    /* box-shadow: 0px 40px 50px -50px rgba(0, 0, 0, 0.32); */
+    border: 2px solid #000;
+    border-radius: 12px;
+    margin-bottom: 20px;
+}

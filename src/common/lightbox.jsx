@@ -3,7 +3,7 @@ import styles from "../styles/lightbox.module.css";
 import { HiX } from "react-icons/hi";
 import { createPortal } from "react-dom";
 
-export default function Lightbox({ src, alt }) {
+export default function Lightbox({ src, alt, style }) {
   const [open, setOpen] = useState(false);
   const [zoomed, setZoomed] = useState(false);
   const [position, setPosition] = useState({ x: 0, y: 0 });
@@ -112,6 +112,7 @@ export default function Lightbox({ src, alt }) {
         alt={alt}
         style={{ cursor: "pointer" }}
         onClick={openLightbox}
+        className={style}
       />
 
       {open &&

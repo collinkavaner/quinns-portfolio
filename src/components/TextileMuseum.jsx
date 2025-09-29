@@ -55,7 +55,8 @@ function TextileMuseum() {
         <h2 className={styles.titleSpacing}>Navigation Design</h2>
         <p className={styles.paraSpacing}>The last part of this project was to bring the information architecture to life. The following screens were created using <b>Balsamiq</b> and they show the desktop navigation task flow for locating the “Community Quilt Drop In Sessions” page.</p>
         <div className={styles.textileImgsContainer}>
-          <Carousel slides={[TextileOne, TextileTwo, TextileThree, TextileFour, TextileFive]} />
+          <Carousel slides={[TextileOne, TextileTwo, TextileThree, TextileFour, TextileFive]}
+          slidesInView={2} />
         </div>
       </section>
 
