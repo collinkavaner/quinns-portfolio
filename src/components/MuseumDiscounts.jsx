@@ -156,7 +156,7 @@ function MuseumDiscounts() {
           Although this project was mostly smooth sailing, there were times where our creative differences hindered our progress and success. When some group members weren't on the same page or didn't agree with a decision, it caused feelings of frustration and confusion. The most important lesson I learned from this is to make sure <b>everyone has a voice</b>. 
         </p>
       </section>
-      <ProjectSwitcher NextProject="Textile Museum of Canada" PrevProject="POS Tipping Screen" NextUrl="/textile-museum-canada" PrevUrl="/pos-tipping-screen" />
+      <ProjectSwitcher NextProject="2WayBay" PrevProject="POS Tipping Screen" NextUrl="/two-way-bay" PrevUrl="/pos-tipping-screen" />
     </>
   );
 }

@@ -68,7 +68,7 @@ function TextileMuseum() {
         <img src={TextileGroup} alt="Group Project Members" className={styles.textileGroup} />
       </section>
 
-      <ProjectSwitcher NextProject={"POS Tipping Screen"} PrevProject={"Museum Discounts"} NextUrl={"/pos-tipping-screen"} PrevUrl={"/museum-discounts"} />
+      <ProjectSwitcher NextProject={"POS Tipping Screen"} PrevProject={"2WayBay"} NextUrl={"/pos-tipping-screen"} PrevUrl={"/two-way-bay"} />
     </>
   );
 }

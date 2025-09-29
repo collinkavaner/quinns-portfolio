@@ -20,6 +20,7 @@ section {
 
 .personaImg {
     max-width: 600px;
+    width: 100%;
 }
 
 .designImgsContainer {
@@ -50,4 +51,16 @@ section {
     border: 2px solid #000;
     border-radius: 12px;
     margin-bottom: 20px;
+}
+
+@media only screen and (max-width: 768px) {
+
+    .designImgsContainer {
+        flex-direction: column;
+    }
+
+    .screenCard {
+        max-width: 46%;
+    }
+
 }

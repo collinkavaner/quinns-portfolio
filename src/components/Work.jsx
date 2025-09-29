@@ -4,6 +4,7 @@ import FourDots from '../assets/4-circles.png'
 import AbstractStatue from '../assets/abstract-statue.webp'
 import SewingMachine from '../assets/sewing-machine.webp'
 import PosMachine from '../assets/pos-machine.webp'
+import TwoWayBay from '../assets/twowaybay.avif'
 import { Link } from 'react-router-dom';
 import { HiChevronRight } from "react-icons/hi";
 
@@ -39,7 +40,18 @@ function Work() {
                 </div>
 
                 <div className={styles.workItem}>
-                    <img src={SewingMachine} className={styles.projectHeroImg} alt="sewing machine" />
+                    <img src={TwoWayBay} className={styles.projectHeroImg} alt="2waybay project" />
+                    <div className={styles.projectDesc}>
+                        <h3>2WayBay</h3>
+                        <h4>App design</h4>
+                        <p>In this project I re-imagined a marketplace without the need for currency.</p>
+                        <Link to="/two-way-bay" className='primary-button'>
+                            <span>View Project</span><HiChevronRight className='chev-r'/>
+                        </Link>
+                    </div>
+                </div>
+
+                <div className={styles.workItem}>
                     <div className={styles.projectDesc}>
                         <h3>Textile Museum of Canada</h3>
                         <h4>IA & NAV redesign</h4>
@@ -48,9 +60,11 @@ function Work() {
                             <span>View Project</span><HiChevronRight className='chev-r'/>
                         </Link>
                     </div>
+                    <img src={SewingMachine} className={styles.projectHeroImg} alt="sewing machine" />
                 </div>
 
                 <div className={styles.workItem}>
+                    <img src={PosMachine} className={styles.projectHeroImg} alt="point of sales machine" />
                     <div className={styles.projectDesc}>
                         <h3>POS tipping screen</h3>
                         <h4>Mini UX case study</h4>
@@ -59,7 +73,6 @@ function Work() {
                             <span>View Project</span><HiChevronRight className='chev-r'/>
                         </Link>
                     </div>
-                    <img src={PosMachine} className={styles.projectHeroImg} alt="point of sales machine" />
                 </div>
             </div>
         </div>

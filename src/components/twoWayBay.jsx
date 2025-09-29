@@ -1,5 +1,6 @@
 import styles from '../styles/twoWayBay.module.css'
 import Lightbox from '../common/lightbox';
+import ProjectSwitcher from './ProjectSwitcher';
 import MiniPersona from '../assets/two-way-bay/mini-persona.avif'
 import Colours from '../assets/two-way-bay/colours.avif'
 import Typography from '../assets/two-way-bay/typography.avif'
@@ -133,6 +134,7 @@ function TwoWayBay() {
                 </div>
             </div>
         </section>
+        <ProjectSwitcher NextProject="Textile Museum of Canada" PrevProject="Museum Discounts" NextUrl="/textile-museum-canada" PrevUrl="/museum-discounts" />
     </>
     );
 }
